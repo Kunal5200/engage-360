@@ -1,19 +1,7 @@
-import { COLORS } from "@/utils/enum";
-import { roboto } from "@/utils/fonts";
-import { loginTextField } from "@/utils/styles";
-import {
-  Box,
-  Card,
-  Container,
-  Grid2,
-  Stack,
-  TextField,
-  Typography,
-} from "@mui/material";
-import { Geist, Geist_Mono } from "next/font/google";
-import Head from "next/head";
-import Image from "next/image";
 import loginImage from "@/login-image.jpg";
+import { Box, Container, Grid2 } from "@mui/material";
+import Head from "next/head";
+import Login from "./components/Login";
 
 export default function Home() {
   return (
@@ -44,7 +32,19 @@ export default function Home() {
             ></Box>
           </Grid2>
           <Grid2 size={4}>
-            <Box sx={{ p: 2 }}></Box>
+            <Box
+              sx={{
+                p: 2,
+                height: "100vh",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+              }}
+            >
+              <Container>
+                <Login />
+              </Container>
+            </Box>
           </Grid2>
         </Grid2>
       </Box>
